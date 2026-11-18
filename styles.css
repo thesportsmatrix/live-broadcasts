@@ -1,0 +1,600 @@
+/* ===========================================================================
+   1. ROOT VARIABLES & GLOBAL DOCUMENT STYLING
+   =========================================================================== */
+
+:root {
+  --sidebar-width: calc(100vw / 2.8);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(circle at 50% 20%, #16181d 0%, #090a0c 70%, #000000 100%);
+  background-attachment: fixed;
+  color: #f0f0f0;
+  font-family: 'Arial Bold', 'Helvetica Neue Bold', Arial, Helvetica, sans-serif !important;
+  font-weight: 450 !important;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+/* ===========================================================================
+   2. TOP BANNER HEADER STYLING
+   =========================================================================== */
+
+.top-banner {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(115%);
+}
+
+
+/* ===========================================================================
+   3. MAIN WRAPPER & DASHBOARD BODY LAYOUT
+   =========================================================================== */
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-body {
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+
+/* ===========================================================================
+   4. SIDEBAR & COLLAPSE TOGGLE BUTTON STYLING
+   =========================================================================== */
+
+.sidebar-wrapper {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 100;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+}
+
+.sidebar-wrapper.collapsed {
+  margin-left: calc(-1 * var(--sidebar-width));
+}
+
+.filter-toggle-btn {
+  position: absolute;
+  top: 16px;
+  right: -24px;
+  width: 24px;
+  height: 168px;
+  background: linear-gradient(180deg, #1d2127 0%, #0d0f12 100%);
+  border: 2px solid #ca8a04;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6),
+              inset 0 1px 1px rgba(254, 240, 138, 0.4);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-toggle-btn:hover {
+  background: linear-gradient(180deg, #292524 0%, #1c1917 100%);
+  border-color: #fde047;
+}
+
+/* Pulse / Flash Animation for Collapsed Sidebar Attention */
+@keyframes toggleAttention {
+  0%, 100% {
+    transform: scale(1);
+    border-color: #ca8a04;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(254, 240, 138, 0.4);
+  }
+  50% {
+    transform: scale(1.2);
+    background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+    border-color: #ffffff;
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.filter-toggle-btn.attention-flash {
+  animation: toggleAttention 0.7s ease-in-out 16;
+}
+
+.toggle-arrow {
+  font-size: 11px;
+  line-height: 1;
+  color: #fef08a;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.sidebar-wrapper.collapsed .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ===========================================================================
+   5. CHARTS COLUMN LAYOUT
+   =========================================================================== */
+
+.charts-column {
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: width 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+}
+
+
+/* ===========================================================================
+   6. METALLIC GOLD BORDER GRADIENT & SHINY CARD STYLING
+   =========================================================================== */
+
+.filter-panel, 
+.chart-container {
+  border-radius: 14px;
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(#141619, #090a0c) padding-box, 
+    linear-gradient(135deg, #fffbeb 0%, #fef08a 20%, #facc15 42%, #78350f 68%, #eab308 85%, #451a03 100%) border-box;
+  box-shadow: 
+    0 0 15px rgba(250, 204, 21, 0.2),
+    0 0 6px rgba(234, 179, 8, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.95);
+  letter-spacing: -0.05em !important;
+}
+
+.filter-panel {
+  padding: 1.25rem;
+  padding-right: 0.75rem;
+  position: sticky;
+  top: clamp(2rem, 6vw, 6rem);
+  z-index: 100;
+  height: fit-content;
+  width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+
+/* ===========================================================================
+   7. TYPOGRAPHY & GOLD ACCENT GRADIENTS FOR HEADINGS AND LABELS
+   =========================================================================== */
+
+.filter-panel h1, 
+.filter-panel h2, 
+.filter-panel h3, 
+.filter-panel h4, 
+.filter-panel h5,
+.chart-container h1,
+.chart-container h2,
+.chart-container h3,
+.chart-container h4,
+.chart-container .chart-title {
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 50%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+
+.chart-container .chart-title {
+  font-size: clamp(0.75rem, 3.8vw, 1.1rem);
+  line-height: 1.3;
+}
+
+.filter-panel > .mb-3 > label,
+.filter-panel .ranked-toggle-wrapper label {
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 60%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+
+/* ===========================================================================
+   8. FORM CONTROLS & CHECKBOX PANELS
+   =========================================================================== */
+
+.filter-panel .form-control,
+.filter-panel .form-select {
+  background-color: #0d0f12;
+  color: #ffffff;
+  border: 2px solid #ca8a04;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.filter-panel .form-control:focus,
+.filter-panel .form-select:focus {
+  background-color: #14171c;
+  color: #ffffff;
+  border-color: #facc15;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+}
+
+.checkbox-panel {
+  overflow-y: auto;
+  background-color: #0b0d0f;
+  border: 2px solid #ca8a04;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #f0f0f0;
+  max-height: 190px;
+  min-height: auto;
+}
+
+.checkbox-panel .form-check {
+  margin-bottom: 0.25rem;
+}
+
+.checkbox-panel .form-check:last-child {
+  margin-bottom: 0;
+}
+
+.ranked-toggle-wrapper {
+  padding-left: 0.85rem;
+}
+
+.form-check-input {
+  background-color: #000000;
+  border: 1.5px solid #eab308;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+
+.form-check-input:checked {
+  background-color: #facc15;
+  border-color: #fef08a;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.6);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input:indeterminate {
+  background-color: #ca8a04;
+  border-color: #fef08a;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+
+.form-check-input:focus {
+  border-color: #fffbeb;
+  outline: 0;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.4);
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+
+/* ===========================================================================
+   8B. EXCEL-STYLE SEARCHABLE DROPDOWN SLICERS
+   =========================================================================== */
+
+.excel-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.excel-dropdown-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-right: 2.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23facc15' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 16px 12px !important;
+}
+
+.excel-btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.excel-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background: #0b0d0f;
+  border: 2px solid #facc15;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.95), 0 0 14px rgba(250, 204, 21, 0.25);
+  z-index: 1150;
+  overflow: hidden;
+}
+
+.excel-dropdown-menu.show {
+  display: block;
+}
+
+.excel-search-wrapper {
+  position: relative;
+  padding: 0.5rem;
+  background: #14171c;
+  border-bottom: 1px solid rgba(202, 138, 4, 0.5);
+}
+
+.excel-search-wrapper input.form-control {
+  padding-right: 1.75rem;
+  border-width: 1.5px;
+  font-size: 0.875rem;
+}
+
+.excel-search-clear {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #facc15;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.excel-search-clear:hover {
+  color: #ffffff;
+}
+
+.excel-checkbox-list {
+  max-height: 210px;
+  overflow-y: auto;
+  padding: 0.35rem 0.65rem 0.5rem 0.65rem;
+  color: #f0f0f0;
+}
+
+.excel-select-all {
+  position: sticky;
+  top: -0.35rem;
+  background: #0b0d0f;
+  z-index: 2;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(202, 138, 4, 0.45);
+}
+
+.excel-select-all .form-check-label {
+  color: #fef08a;
+}
+
+.excel-item-row {
+  margin-bottom: 0.25rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 4px;
+}
+
+.excel-item-row:hover {
+  background-color: rgba(250, 204, 21, 0.08);
+}
+
+.excel-item-row .form-check-label {
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  display: block;
+}
+
+
+/* ===========================================================================
+   9. CUSTOM GOLD SCROLLBARS
+   =========================================================================== */
+
+.filter-panel::-webkit-scrollbar,
+.checkbox-panel::-webkit-scrollbar,
+.excel-checkbox-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-panel::-webkit-scrollbar-track,
+.checkbox-panel::-webkit-scrollbar-track,
+.excel-checkbox-list::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.filter-panel::-webkit-scrollbar-thumb,
+.checkbox-panel::-webkit-scrollbar-thumb,
+.excel-checkbox-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fffbeb 0%, #facc15 50%, #78350f 100%);
+  border-radius: 3px;
+}
+
+
+/* ===========================================================================
+   10. CHART CONTAINERS & PLOTLY STYLING OVERRIDES
+   =========================================================================== */
+
+.chart-container {
+  padding: 1rem 1rem 0.5rem 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  flex: 0 0 auto;
+  min-height: auto;
+  width: 100% !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+.plotly-chart {
+  width: 100% !important;
+  min-width: 0 !important;
+  touch-action: pan-y;
+}
+
+#barChart,
+#digitalChart,
+#barChart .js-plotly-plot,
+#digitalChart .js-plotly-plot,
+#barChart .nsewdrag,
+#digitalChart .nsewdrag {
+  touch-action: pan-y !important;
+}
+
+.chart-container text {
+  font-family: 'Segoe UI', Tahoma, sans-serif !important;
+  fill: #e2e8f0 !important;
+}
+
+.chart-container .gtitle,
+.chart-container .g-title {
+  fill: #e2e8f0 !important;
+  font-weight: 600 !important;
+}
+
+
+/* ===========================================================================
+   11. FOOTER & UTILITY CLASSES
+   =========================================================================== */
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  padding: 10px 0 5px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  user-select: none;
+}
+
+.tiny-icon {
+  width: 48px;
+  height: 48px;
+}
+
+
+/* ===========================================================================
+   12. RESPONSIVE MEDIA QUERIES (TABLET & MOBILE)
+   =========================================================================== */
+
+@media (max-width: 1300px) {
+  .sidebar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1050;
+    filter: drop-shadow(5px 0 25px rgba(0, 0, 0, 0.95));
+  }
+
+  .filter-panel {
+    top: 0;
+    border-radius: 0 14px 14px 0;
+    min-height: 100%;
+    overflow-y: auto;
+    padding-bottom: 15rem;
+  }
+
+  .charts-column {
+    padding-left: 1rem !important;
+    padding-right: 1.1rem;
+    gap: 1rem;
+  }
+
+  .chart-container {
+    padding: 0.75rem 0.5rem 0.25rem 0.1rem;
+    border-radius: 10px;
+  }
+}
+
+/* Tablet Landscape (~1280px wide) Right-Side Padding Boost */
+@media (min-width: 769px) and (max-width: 1300px) and (orientation: landscape) {
+  .charts-column {
+    padding-right: 2rem !important;
+  }
+  .chart-container {
+    padding-right: 1.25rem;
+  }
+}
+
+/* Mobile Landscape (~742px wide) Right-Side Padding Boost */
+@media (max-width: 768px) and (orientation: landscape) {
+  .charts-column {
+    padding-right: 1.75rem !important;
+  }
+  .chart-container {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) and (orientation: portrait) {
+  .sidebar-wrapper {
+    --sidebar-width: calc(100vw - 34px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .filter-panel {
+    border-radius: 0 12px 12px 0;
+  }
+}
+
+.chart-title .timezone-note {
+  font-size: 0.6em;
+  font-style: italic;
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+  .chart-title .timezone-note {
+    display: block;     
+    margin-left: 0.75rem; 
+    margin-top: 2px;     
+  }
+}
