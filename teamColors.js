@@ -111,7 +111,7 @@ const TEAM_COLORS = {
   "UAB": "#215732", "UC Davis": "#002855", "UCF": "#BA9B37", "UCLA": "#2D68C4", "UConn": "#000E2E", "UIW": "#C41230", "UL Monroe": "#531B2B", "UMass": "#881C1C", "UMass Lowell": "#0067C5", 
   "UMBC": "#000000", "Union": "#821019", "UNLV": "#E31837", "US NTDP": "#98002E", "USC": "#990000", "UT Martin": "#002A54", "UT Rio Grand Valley": "#F05A28", "UTEP": "#FF8200", 
   "Utah": "#BE0000", "Utah State": "#00263A", "Utah Tech": "#BA1C21", "UTSA": "#0C2340",
-  "UC San Diego": "#182B49", "UIC": "#AC1E2D", "UC Santa Barbara": "#003660", "UT Rio Grande Valley": "#CB4900",
+  "UC San Diego": "#182B49", "UIC": "#AC1E2D", "UC Santa Barbara": "#003660", "UT Rio Grande Valley": "#CB4900", "Utah Valley": "#185C33",
   
   // V
   "Valkyries": "#B896D4", "Valparaiso": "#613312", "Vanderbilt": "#866D4B", "Vermont": "#005A36", "Vikings": "#4F2683", "Villanova": "#00205B", "Virginia": "#232D4B", "Virginia Tech": "#630031", 
