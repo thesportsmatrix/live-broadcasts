@@ -1,2 +1,87 @@
-# live-broadcasts
-Under Construction
+# Live Sports Broadcast Dashboard v1.7.0
+
+An interactive, single-page web dashboard designed to simplify your daily live sports viewing experience each week. Built with **HTML5, CSS3, JavaScript (ES6+), Bootstrap 5**, and **Plotly.js**, this dashboard provides a sleek, dark-mode visual grid of broadcast and streaming schedules across major American professional and collegiate sports leagues with real-time dynamic filtering.
+
+![Live Sports Dashboard Banner](images/headerBanner.png)
+
+---
+
+## Live Demo
+
+Check out the live interactive application hosted on GitHub Pages:  
+👉 **[https://thesportsmatrix.github.io/live-broadcasts/](https://thesportsmatrix.github.io/live-broadcasts/)**
+
+---
+
+## ✨ Features & Functionality
+
+- **Dual Synchronized Timelines & Panning**:
+  * **National Broadcast Networks**: Visual timeline tracking major linear networks (e.g., CBS, FOX, ESPN, etc.).
+  * **Streaming Providers**: Dedicated schedule tracking for digital-only streams (e.g., ESPN+, Peacock, Prime Video, etc.).
+  * **Cross-Chart Timeline Synchronization**: Panning, scrolling, or scrubbing either the Linear Broadcast or Digital Streaming chart dynamically moves both visualization grids in lockstep.
+  * **Persistent Viewport Position**: Remembers and retains the user's panned and scrolled horizontal timeline viewport position across state changes, sidebar toggles, and minor redraws, eliminating unwanted jumps.
+  * **Expanded 24-Hour Timeline & Gridlines**: Comprehensive time axis configuration fully supporting international time zones and early-morning schedule shifts (such as 2:00 AM and 3:00 AM local time) complete with vertical gridlines.
+- **Dynamic Mobile Portrait View & Axis Redesign**:
+  * **Focused Initial Window & Touch Panning**: Mobile portrait layouts default to an initial focused window equipped with smooth touch-panning (`dragmode: 'pan'`) and vertical page-scroll support (`touch-action: pan-y`).
+  * **Snug Axis Margins**: Fixed y-axis layout configuration (`automargin: false` with custom margin bounds) that eliminates excessive side whitespace and pulls broadcast network labels snugly against the container edge.
+  * **Dynamic Hour Grid Generation**: Granular hour-by-hour gridlines and time labels are calculated and rendered on the fly as the user pans and scrolls horizontally.
+- **Optimized Real-Time "Now" Vertical Line Indicator**:
+  * Features a high-performance background timer utilizing lightweight `Plotly.relayout` updates every 30 seconds to adjust the current-day red indicator line in place without triggering full chart re-renders, preserving user zoom scale, pan positions, and active hover tooltips.
+- **Robust Multi-Year & Cross-Season Date Resolution**:
+  * Advanced multi-season parsing tracks winter sports schedules across December into January boundary transitions (automatically rolling year increments when months decrease sequentially).
+  * Strict chronological sorting across date dropdown slicers driven by pre-calculated `_gameNormalizedTime` timestamps.
+- **Comprehensive League & Professional Coverage**:
+  * Integrates broad coverage across both major **American professional sports leagues** and **NCAA collegiate athletics**.
+- **Fully Inter-Adaptive & Superseding Filter Architecture**:
+  * **Excel-Style Searchable Multi-Select Dropdowns**: Added new **Network/Platform** and **Matchup/Event** filters as searchable, multi-select dropdown menus featuring live text filtering, clear-search buttons, indeterminate checkbox states, and dynamic selection summary badges (`All`, `None selected`, single-item title, or selection count).
+  * **Search-Aware Select All**: Smart `(Select All)` / `(Select All Search Results)` behavior that preserves existing user selections outside the active search view when bulk-toggling filtered results.
+  * **Universal Search Supersession**: Global text search filter that strictly supersedes all other UI controls. Typing a query instantly displays every matching game across the dataset regardless of default filters or active constraints.
+  * **Intelligent Non-NCAA Conference Exemption**: Professional and non-NCAA leagues (such as the NFL, NHL, and PGA Tour) automatically bypass collegiate ranking filters, enabling seamless multi-league viewing alongside targeted college filters without manual workarounds.
+  * **Day/Date Selection & Robust Persistence**: Instant focus on specific days within the rolling dataset. Deselecting sports leagues while viewing future dates safely preserves your selected date rather than defaulting back to the start of the dataset.
+  * **Sports/League Toggle**: Multi-select filter with optimized default settings to minimize visual clutter on initial load.
+  * **Ranked Teams Toggle**: One-click toggle to isolate ranked collegiate matchups, dynamically enabling or disabling based on active availability in the current filtered scope.
+  * **Game Time Slicer**: Dynamic multi-select filter adapting to active game start times.
+  * **Conference Slicer**: Dynamic conference filter cross-adapting with active day, league, team, and time selections to eliminate dead-end choices.
+  * **Smart Today-View Timeline Auto-Advancement**: Implements dynamic x-axis start padding for current-day schedules—automatically shifting the initial timeline window to ~40 minutes prior to the current time when the earliest game of the day started more than 2.5 hours ago.
+- **Local Time Zone Standardization**:
+  * Automatically translates backend data schedule calculations into the user's local device time zone for effortless, accurate cross-region viewing.
+- **API-Driven Data Pipeline**:
+  * Powered by an automated data extraction and transformation pipeline that standardizes multi-sport schedules, handles time zone normalization, transforms incoming data, passes validation checks, and aggregates live game datasets into `weekFull.csv`.
+- **Art Deco Dark Theme & Special Event Styling**:
+  * Clean, polished, custom CSS UI tailored with gold accents and responsive sidebar controls.
+  * Custom team color branding and high-contrast timeline bars, featuring specialized color formatting for major studio shows, special events, and championship broadcasts—including *College GameDay*, *Big Noon Kickoff*, *ACC Huddle*, *SEC Nation*, *B1G Tailgate*, *CFP Rankings*, *NCAA Tournament Selection Show*, *NASCAR RaceDay*, *UFC*, *Army-Navy*, and Bowl games, alongside fallback data validation for missing team colors.
+- **Full Analytics Integration**:
+  * Integrated **Google Analytics 4 (GA4)** for tracking real-time user activity, slicer interactions, and device metrics.
+  * Configured with dual IPv4 & IPv6 internal traffic exclusion rules to keep development metrics clean.
+- **SEO & Social Share Ready**:
+  * Fully equipped with **Open Graph** and **Twitter Card** metadata for rich media link previews across iMessage, X, LinkedIn, and Discord.
+  * Embedded **Schema.org (JSON-LD)** structured data for enhanced search engine indexing.
+
+---
+
+## 🛠️ Tech Stack & Libraries
+
+| Category | Technology / Library |
+| :--- | :--- |
+| **Frontend Framework** | HTML5, Modern CSS3, JavaScript (Vanilla ES6+) |
+| **UI Layout** | Bootstrap 5.3 |
+| **Data Visualization** | Plotly.js |
+| **Data Pipeline** | Python (API Extraction & Schedule Aggregation), Power Query (Transformation Rules) |
+| **Hosting & Deployment**| GitHub Pages |
+| **Analytics** | Google Analytics 4 (gtag.js) |
+| **Typography & Assets**| Google Fonts, Custom SVG Icons |
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── currentWeek/          # Active schedule data directory
+│   └── weekFull.csv      # API-aggregated rolling matchup dataset
+├── images/               # Visual asset directory
+│   └── headerBanner.png  # Dashboard header banner & Open Graph preview image
+├── gameDashboard.js      # Inter-adaptive filter logic, timeline synchronization, and Plotly rendering
+├── index.html            # Main HTML entry point with layout & SEO metadata
+├── README.md             # Project documentation
+├── styles.css            # Custom dark-theme styling, animations & responsive rules
+└── teamColors.js         # Key-value map of team names to hex color codes
