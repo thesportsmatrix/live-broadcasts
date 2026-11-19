@@ -39,7 +39,7 @@ const TEAM_COLORS = {
   // G
   "Gardner-Webb": "#CC0000", "Georgetown": "#041E42", "Georgia": "#BA0C2F", "Georgia Southern": "#00152B", "Georgia State": "#0039A6", "Georgia Tech": "#B3A369", "Giants": "#FD5A1E", 
   "NY Giants": "#0B2265", "Golden Knights": "#B3995D", "Gonzaga": "#041E42", "Green Bay": "#006747", "Grizzlies": "#5D76A9", "Guardians": "#0C2340", "George Mason": "#005239",
-  "Grand Canyon": "#522398",
+  "Grand Canyon": "#522398", "George Washington": "#002d62",
 
   // H
   "Harvard": "#A51C30", "Hawai'i": "#024731", "Hawks": "#C8102E", "Heat": "#98002E", "Holy Cross": "#60269E", "Hornets": "#1D1160", "Houston": "#C8102E", "Houston Christian": "#002F6C", 
@@ -112,6 +112,7 @@ const TEAM_COLORS = {
   "UMBC": "#000000", "Union": "#821019", "UNLV": "#E31837", "US NTDP": "#98002E", "USC": "#990000", "UT Martin": "#002A54", "UT Rio Grand Valley": "#F05A28", "UTEP": "#FF8200", 
   "Utah": "#BE0000", "Utah State": "#00263A", "Utah Tech": "#BA1C21", "UTSA": "#0C2340",
   "UC San Diego": "#182B49", "UIC": "#AC1E2D", "UC Santa Barbara": "#003660", "UT Rio Grande Valley": "#CB4900", "Utah Valley": "#185C33",
+  "UNC Wilmington": "#007680",
   
   // V
   "Valkyries": "#B896D4", "Valparaiso": "#613312", "Vanderbilt": "#866D4B", "Vermont": "#005A36", "Vikings": "#4F2683", "Villanova": "#00205B", "Virginia": "#232D4B", "Virginia Tech": "#630031", 
