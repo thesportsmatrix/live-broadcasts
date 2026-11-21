@@ -34,7 +34,7 @@ const TEAM_COLORS = {
   // F
   "Fairleigh Dickinson": "#72293C", "Falcons": "#A71930", "Ferris State": "#BA0C2F", "Fever": "#041E42", "Flames": "#C8102E", "Florida": "#0021A5", "Florida Atlantic": "#003366", 
   "Florida International": "#081E3F", "Florida State": "#782F40", "Flyers": "#F47920", "Fordham": "#860038", "Franklin Pierce": "#A91938", "Fresno State": "#C41230", "Furman": "#4D1979",
-  "Florida A&M": "#F4811F", 
+  "Florida A&M": "#F4811F", "Florida Gulf Coast": "#007749",
   
   // G
   "Gardner-Webb": "#CC0000", "Georgetown": "#041E42", "Georgia": "#BA0C2F", "Georgia Southern": "#00152B", "Georgia State": "#0039A6", "Georgia Tech": "#B3A369", "Giants": "#FD5A1E", 
@@ -74,7 +74,7 @@ const TEAM_COLORS = {
   "New Mexico State": "#891216", "Niagara": "#002D62", "Nicholls": "#C41230", "Norfolk State": "#007A3D", "North Alabama": "#9E1B32", "North Carolina": "#7BAFD4", 
   "North Carolina Central": "#841F2B", "North Dakota": "#006A4E", "North Dakota State": "#00583D", "North Texas": "#00853E", "Northeastern": "#CC0000", "Northern Arizona": "#002447",
   "Northern Colorado": "#002A54", "Northern Illinois": "#C8102E", "Northern Michigan": "#006633", "Northwestern": "#4E2A84", "Northwestern State": "#F15A22", "Notre Dame": "#0C2340", 
-  "Nuggets": "#0E2240", "Northern Iowa": "#4B116F", "Northern Kentucky": "#FFC72C",
+  "Nuggets": "#0E2240", "Northern Iowa": "#4B116F", "Northern Kentucky": "#FFC72C", "North Florida": "#00246B",
   
   // O
   "Ohio": "#00694E", "Ohio State": "#BB0000", "Oilers": "#041E42", "Oklahoma": "#841617", "Oklahoma State": "#FE5C00", "Old Dominion": "#003057", "Ole Miss": "#006BA6", "Omaha": "#000000", 
@@ -100,7 +100,7 @@ const TEAM_COLORS = {
   "South Florida": "#006747", "Southern Illinois": "#720000", "Southern Miss": "#000000", "Southern Utah": "#DB0000", "Sparks": "#702F8A", "Spurs": "#000000", "St. Cloud State": "#CC0000", 
   "St. John's": "#BA0C2F", "St. Lawrence": "#AF1E2D", "St. Thomas-Minnesota": "#512888", "Stanford": "#8C1515", "Stars": "#006847", "Steelers": "#101820", "Stetson": "#005A36",
   "Stonehill": "#00205B", "Storm": "#2C5234", "Stephen F. Austin": "#330066", "Sun": "#FC4C02", "Suns": "#1D1160", "Syracuse": "#F76900", "Saint Mary's": "#06315B",
-  "San Francisco": "#00543C", "Southern Indiana": "#CF102D", "Santa Clara": "#862633", "St. Bonaventure": "#54261A", "Southern": "#61AEE1",
+  "San Francisco": "#00543C", "Southern Indiana": "#CF102D", "Santa Clara": "#862633", "St. Bonaventure": "#54261A", "Southern": "#61AEE1", "Saint Joseph's": "#9E1B32",
   
   // T
   "Tarleton State": "#4F2683", "TBD": "#000000", "TCU": "#4D1979", "Temple": "#9D2235", "Tennessee": "#FF8200", "Tennessee State": "#002147", "Tennessee Tech": "#4B2E83", "Texans": "#03202F",
