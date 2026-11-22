@@ -21,7 +21,7 @@ const TEAM_COLORS = {
   "Charlotte": "#00502F", "Chattanooga": "#003865", "Chiefs": "#E31837", "Cincinnati": "#000000", "Clarkson": "#004B49", "Clemson": "#F56600", "Clippers": "#C8102E", "Coastal Carolina": "#006F71", 
   "Colgate": "#821019", "Colts": "#002C5F", "Colorado": "#CFB87C", "Colorado College": "#000000", "Colorado State": "#1E4D2B", "Commanders": "#5A1414", "Coppin State": "#003056",
   "Cornell": "#B31B1B", "Cowboys": "#003594", "Coyotes": "#8C2633", "Creighton": "#005CA9", "Cubs": "#0E3386",
-  "Chicago State": "#006666", "Cal State Bakersfield": "#003594", "Columbia": "#7BA4DB",
+  "Chicago State": "#006666", "Cal State Bakersfield": "#003594", "Columbia": "#7BA4DB", "California Baptist": "#002554",
 
   // D
   "Dartmouth": "#00693E", "Davidson": "#AC1A2F", "Dayton": "#E4002B", "Delaware": "#00539F", "Delaware State": "#CC0000", "Denver": "#8B2332", "DePaul": "#003DA5", "Devils": "#CE1126", 
@@ -101,11 +101,12 @@ const TEAM_COLORS = {
   "St. John's": "#BA0C2F", "St. Lawrence": "#AF1E2D", "St. Thomas-Minnesota": "#512888", "Stanford": "#8C1515", "Stars": "#006847", "Steelers": "#101820", "Stetson": "#005A36",
   "Stonehill": "#00205B", "Storm": "#2C5234", "Stephen F. Austin": "#330066", "Sun": "#FC4C02", "Suns": "#1D1160", "Syracuse": "#F76900", "Saint Mary's": "#06315B",
   "San Francisco": "#00543C", "Southern Indiana": "#CF102D", "Santa Clara": "#862633", "St. Bonaventure": "#54261A", "Southern": "#61AEE1", "Saint Joseph's": "#9E1B32",
+  "Seattle U": "#AA0000",
   
   // T
   "Tarleton State": "#4F2683", "TBD": "#000000", "TCU": "#4D1979", "Temple": "#9D2235", "Tennessee": "#FF8200", "Tennessee State": "#002147", "Tennessee Tech": "#4B2E83", "Texans": "#03202F",
   "Texas": "#BF5700", "Texas A&M": "#500000", "Texas State": "#501214", "Texas Tech": "#C30020", "The Citadel": "#3A75C4", "Thunder": "#007AC1", "Tigers": "#0C2340", "Timberwolves": "#0C2340",
-  "Titans": "#0C2340", "Toledo": "#15397F", "Trail Blazers": "#E03A3E", "Troy": "#AE1127", "Tulane": "#006747", "Tulsa": "#002D62", "Twins": "#002B5C",
+  "Titans": "#0C2340", "Toledo": "#15397F", "Trail Blazers": "#E03A3E", "Troy": "#AE1127", "Tulane": "#006747", "Tulsa": "#002D62", "Twins": "#002B5C", "Towson": "#FFBB00",
 
   // U
   "UAB": "#215732", "UC Davis": "#002855", "UCF": "#BA9B37", "UCLA": "#2D68C4", "UConn": "#000E2E", "UIW": "#C41230", "UL Monroe": "#531B2B", "UMass": "#881C1C", "UMass Lowell": "#0067C5", 
