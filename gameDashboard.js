@@ -1116,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "TGL": "#164a6c",
     "WTGL": "#ec2c3f",
     "NHRA": "#ef3a43",
-    "Golf (M)": "#006747",
+    "PGA Tour (Exh.)": "#006747",
   };
 
   function getHomeTeamColor(matchup, league = "") {
