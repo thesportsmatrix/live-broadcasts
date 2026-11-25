@@ -16,7 +16,7 @@
 "Wed, Nov 25",NCAA Basketball (W),Arizona at George Washington,Spiideo,N,12:30 PM,2:30 PM,Big XII,Atlantic 10
 "Wed, Nov 25",NCAA Volleyball (W),Boston College at Virginia,ACCNX,N,1:00 PM,3:00 PM,ACC,ACC
 "Wed, Nov 25",NCAA Volleyball (W),Georgia Tech at #3 SMU,ACCNX,Y,1:00 PM,3:00 PM,ACC,ACC
-"Wed, Nov 25",NCAA Basketball (M),Arizona State at #20 LSU,CBSSN,Y,1:00 PM,3:00 PM,Big XII,SEC
+"Wed, Nov 25",NCAA Basketball (M),#20 LSU at Arizona State,CBSSN,Y,1:00 PM,3:00 PM,SEC,Big XII
 "Wed, Nov 25",NCAA Basketball (M),Grace Christian at Western Michigan,ESPN+,N,1:00 PM,3:00 PM,MAC,MAC
 "Wed, Nov 25",NCAA Volleyball (W),#20 Baylor at West Virginia,ESPN+,Y,1:00 PM,3:00 PM,Big XII,Big XII
 "Wed, Nov 25",NCAA Basketball (M),Arkansas-Pine Bluff at South Dakota,Midco/Summit,N,1:00 PM,3:00 PM,SWAC,Summit League
@@ -109,10 +109,10 @@
 "Thu, Nov 26",NCAA Basketball (M),DePaul at Pitt,FS1,N,6:00 PM,8:00 PM,Big East,ACC
 "Thu, Nov 26",NCAA Football,TCU at #11 Texas Tech,ESPN,Y,7:00 PM,10:30 PM,Big XII,Big XII
 "Thu, Nov 26",NFL,Chiefs at Bills,NBC,Y,7:20 PM,10:45 PM,AFC West,AFC East
-"Thu, Nov 26",NCAA Basketball (M),#13 St. John's at #25 Louisville,ESPN2,Y,8:00 PM,10:00 PM,Big East,ACC
-"Thu, Nov 26",NCAA Basketball (M),Kansas State at #15 Alabama,ESPNU,Y,8:00 PM,10:00 PM,Big XII,SEC
+"Thu, Nov 26",NCAA Basketball (M),#25 Louisville at #13 St. John's,ESPN2,Y,8:00 PM,10:00 PM,ACC,Big East
+"Thu, Nov 26",NCAA Basketball (M),#15 Alabama at Kansas State,ESPNU,Y,8:00 PM,10:00 PM,SEC,Big XII
 "Thu, Nov 26",NCAA Basketball (W),Cincinnati at Miami (OH),FloSports,N,8:00 PM,10:00 PM,Big XII,MAC
-"Thu, Nov 26",NCAA Basketball (M),#22 Gonzaga at Baylor,ESPN,Y,10:30 PM,12:30 AM,Pac-12,Big XII
+"Thu, Nov 26",NCAA Basketball (M),Baylor at #22 Gonzaga,ESPN,Y,10:30 PM,12:30 AM,Big XII,Pac-12
 "Thu, Nov 26",NCAA Basketball (M),#5 Texas Tech at Oregon,ESPN2,Y,10:30 PM,12:30 AM,Big XII,Big Ten
 "Fri, Nov 27",PGA Tour (Exh.),The 28th Farmers Insurance Skins Game,Prime Video,Y,8:00 AM,12:30 PM,Golf Skins Game,Golf Skins Game
 "Fri, Nov 27",NCAA Hockey (M),#3 Minnesota Duluth at #9 Providence,TBA,Y,8:00 AM,10:30 AM,NCHC,Hockey East
@@ -124,6 +124,7 @@
 "Fri, Nov 27",NCAA Basketball (W),Indiana at Mississippi State,TBA,N,10:00 AM,12:00 PM,Big Ten,SEC
 "Fri, Nov 27",NCAA Basketball (W),Bowling Green at Texas A&M,TBA,N,10:00 AM,12:00 PM,MAC,SEC
 "Fri, Nov 27",NCAA Football,Mississippi State at #22 Ole Miss,ABC,Y,11:00 AM,2:30 PM,SEC,SEC
+"Fri, Nov 27",NCAA Basketball (W),Akron at #3 Louisville,ACCNX,Y,11:00 AM,1:00 PM,MAC,ACC
 "Fri, Nov 27",NCAA Basketball (W),DePaul at Northwestern,B1G+,N,11:00 AM,1:00 PM,Big East,Big Ten
 "Fri, Nov 27",NCAA Basketball (W),Charleston at Boston College,BallerTV,N,11:00 AM,1:00 PM,CAA,ACC
 "Fri, Nov 27",NCAA Football,#25 Nebraska at #13 Iowa,CBS,Y,11:00 AM,2:30 PM,Big Ten,Big Ten
@@ -134,7 +135,6 @@
 "Fri, Nov 27",NCAA Basketball (W),Morehead State at Buffalo,FloSports,N,11:00 AM,1:00 PM,Ohio Valley,MAC
 "Fri, Nov 27",NCAA Basketball (M),Liberty University at St. Thomas-Minnesota,TBA,N,11:00 AM,1:00 PM,Conference USA,Summit League
 "Fri, Nov 27",NCAA Basketball (W),Missouri at Tulane,BallerTV,N,11:15 AM,1:15 PM,SEC,AAC
-"Fri, Nov 27",NCAA Basketball (W),Akron at #3 Louisville,ACCNX,Y,12:00 PM,2:00 PM,MAC,ACC
 "Fri, Nov 27",NCAA Volleyball (W),#19 North Carolina at Miami,ACCNX,Y,12:00 PM,2:00 PM,ACC,ACC
 "Fri, Nov 27",NCAA Volleyball (W),#20 Baylor at Cincinnati,ESPN+,Y,12:00 PM,2:00 PM,Big XII,Big XII
 "Fri, Nov 27",NHL,Maple Leafs at Bruins,ESPN+,Y,12:00 PM,2:30 PM,Eastern (Atlantic),Eastern (Atlantic)
@@ -250,7 +250,7 @@
 "Fri, Nov 27",NBA,Nuggets at Jazz,Jazz+,Y,8:30 PM,11:00 PM,Western Conference,Western Conference
 "Fri, Nov 27",NBA,Lakers at Spurs,Prime Video,Y,8:30 PM,11:00 PM,Western Conference,Western Conference
 "Sat, Nov 28",NCAA Football (Pregame),College GameDay (Wake Forest),ESPN,Y,8:00 AM,11:00 AM,NCAA Football (Pregame),NCAA Football (Pregame)
-"Sat, Nov 28",NCAA Football (Pregame),SEC Nation (Alabama),SECN,Y,8:00 AM,11:45 AM,SEC,SEC
+"Sat, Nov 28",NCAA Football (Pregame),SEC Nation (TBA),SECN,Y,8:00 AM,11:45 AM,SEC,SEC
 "Sat, Nov 28",NCAA Football (Pregame),ACC Huddle (Wake Forest),ACCN,Y,9:00 AM,11:00 AM,ACC,ACC
 "Sat, Nov 28",NCAA Football (Pregame),B1G Tailgate (Ohio State),BTN,Y,9:00 AM,11:30 AM,Big Ten,Big Ten
 "Sat, Nov 28",NCAA Football (Pregame),Big Noon Kickoff (Ohio State),FOX,Y,9:00 AM,11:00 AM,NCAA Football (Pregame),NCAA Football (Pregame)
@@ -349,7 +349,7 @@
 "Sat, Nov 28",NCAA Basketball (W),Cal State Bakersfield at Arizona State,ESPN+,N,3:30 PM,5:30 PM,Big West,Big XII
 "Sat, Nov 28",NCAA Basketball (W),NC State at #9 LSU,ion,Y,3:30 PM,5:30 PM,ACC,SEC
 "Sat, Nov 28",NCAA Hockey (M),Ohio State at Union,ESPN+,N,4:00 PM,6:30 PM,Big Ten,ECAC
-"Sat, Nov 28",NBA,Magic at Wizards,MNMT,Y,4:00 PM,6:30 PM,Eastern Conference,Eastern Conference
+"Sat, Nov 28",NBA,Magic at Wizards,MNMT2,Y,4:00 PM,6:30 PM,Eastern Conference,Eastern Conference
 "Sat, Nov 28",NCAA Hockey (W),#2 Minnesota at #8 Penn State,TBA,Y,4:00 PM,6:15 PM,WCHA,AHA
 "Sat, Nov 28",NCAA Hockey (M),Air Force at Holy Cross,FloSports,N,4:05 PM,6:35 PM,AHA,AHA
 "Sat, Nov 28",NCAA Basketball (W),Rutgers at Georgetown,BallerTV,N,4:45 PM,6:45 PM,Big Ten,Big East
