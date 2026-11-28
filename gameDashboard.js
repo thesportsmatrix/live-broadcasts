@@ -1127,6 +1127,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return LEAGUE_COLORS[cleanLeague];
     }
 
+    if (/\bvs\b/.test(matchup)) return '#C28C19';
+    
     if (/\bArmy-Navy\b/.test(matchup)) return '#B22234';
 
     if (/\bBig Noon Kickoff\b/.test(matchup)) return '#002a54';
